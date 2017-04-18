@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="POC Tableau Portal with JavaScript">
+    <meta name="author" content="Alex Morton">
+	
+	<title>Tableau Portal with JavaScript</title>
+	
+	<!-- Tableau JavaScript -->
+	<script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
+	<script src="js/portaljs.js"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+</head>
+
+<body onload="createViz('https://public.tableau.com/views/WirelessSurvey/WirelessSurvey');">
+	<div id="wrapper">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img alt="SPINS" src="images/SPINS_logo.png" style='height: 100%; width: 100%; object-fit: contain'>
+					</a>
+				</div>
+			</div>
+			
+			<ul class="nav navbar-top-links navbar-right">
+			
+			</ul>
+		</nav>
+		
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-default" onclick="createViz('https://public.tableau.com/views/WirelessSurvey/Dashboard2');">1</button>
+			<button type="button" class="btn btn-default" onclick="createViz('https://public.tableau.com/views/WirelessSurvey/WirelessSurvey');">2</button>
+		</div>
+    
+		<div id="vizContainer" style="width:800px; height:700px;">
+		</div>
+	
+	</div>
+</body>
+</html>
